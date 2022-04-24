@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "27a7a234-764a-4a07-b359-6ee321760285",
+		"name": "OneAssure",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload CSV",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csv_upload",
+							"type": "file",
+							"src": "/C:/Users/shars/Downloads/research-and-development-survey-2016-2019-csv.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/v1/csv_upload/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"csv_upload",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/v1/csv_upload/?Year=2016&Breakdown=ANZSIC_1_Digit&RD_Value=91",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"csv_upload",
+						""
+					],
+					"query": [
+						{
+							"key": "Year",
+							"value": "2016"
+						},
+						{
+							"key": "Breakdown",
+							"value": "ANZSIC_1_Digit"
+						},
+						{
+							"key": "RD_Value",
+							"value": "91"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/v1/csv_upload/?Year=2016&Breakdown=ANZSIC_1_Digit&RD_Value=91",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"csv_upload",
+						""
+					],
+					"query": [
+						{
+							"key": "Year",
+							"value": "2016"
+						},
+						{
+							"key": "Breakdown",
+							"value": "ANZSIC_1_Digit"
+						},
+						{
+							"key": "RD_Value",
+							"value": "91"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
